@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Details from "../components/Details";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 
@@ -13,8 +14,13 @@ const Home = () => {
 
       <Header />
       <Nav />
+      <Details />
     </div>
   );
 };
 
 export default Home;
+
+export async function getServerSide(context) {
+  const genre = context.query.genre;
+}
